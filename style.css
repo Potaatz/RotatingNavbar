@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    margin: 0%;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    background-color: rgb(108, 113, 117);
+    background-image: url('hhttps://c4.wallpaperflare.com/wallpaper/448/3/766/naruto-red-symbol-uchiha-clan-white-hd-wallpaper-preview.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circleContainer{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    transform: translate(-60px,-60px);
+    z-index: 2;
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.circleContainer.active{
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    transform: translate(-60px,-60px) rotate(-90deg);
+    transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+/* .circle.active{
+    transform: rotate(90deg);
+    transform-origin: center;
+    z-index: 1;
+} */
+
+.btn{
+    position: fixed;
+    top: 60%;
+    justify-content: center;
+    width:30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    outline: none;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    border-radius: 300%;
+}
+
+.circleContainer.active #close{
+    transform: rotate(90deg);
+}
+
+#open{
+    left: 60%;
+    top:60%;
+}
+
+#close{
+    right:60%;
+    
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transition:transform 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform-origin: top left;
+}
+
+.content.active{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-20deg);
+    transition: 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform-origin: top left;
+}
+
+.panel.active{
+    flex: 5;
+    width: auto;
+    height: 80vh;
+     padding: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    color: aliceblue;
+    font-size: large;
+    position: relative;
+    transition: flex 0.7s ease-in;
+
+}
+.panel.active h3{
+    left: 5%;
+    opacity:1;
+    font-size: 50px;
+    transition: opacity 0.4s ease-in 0.8s ;
+    margin-bottom: 10px;
+}
+
+.panel{
+    height: 80vh;
+    padding: 0.5cm;
+    margin: 0.3cm;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex:0.5;
+    border-radius: 50px;
+    color: aliceblue;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    bottom: 2px;
+    left: 12px;
+    position:absolute;
+    opacity:0
+}
+
+.nav ul{
+    position: absolute;
+    list-style-type: none;
+    bottom: 40px;
+    left:10px;
+    color: white;
+    
+}
